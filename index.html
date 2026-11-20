@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ziad El Alami · Full-Stack Developer</title>
+  <meta name="description" content="Ziad El Alami, junior full-stack developer in Madrid. Websites, AI chatbots and Python automation for small businesses." />
+  <meta name="theme-color" content="#05060D" />
+  <meta property="og:title" content="Ziad El Alami · Full-Stack Developer" />
+  <meta property="og:description" content="Websites, AI chatbots and Python automation for small businesses." />
+  <meta property="og:url" content="https://elalamiz605-tech.github.io" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated starfield background (drawn by script.js) -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a href="#top" class="brand" aria-label="Home">
+      <img src="assets/logo.svg" alt="" width="36" height="36" />
+      <span>Ziad El Alami</span>
+    </a>
+    <nav>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <button id="lang-toggle" class="lang" type="button" aria-label="Switch language">FR</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Junior Full-Stack Developer · Madrid</p>
+      <h1>
+        <span data-i18n="hero.hello">Hi, I'm</span>
+        <span class="gradient">Ziad El Alami</span>
+      </h1>
+      <p class="lead" data-i18n="hero.tagline">
+        I build fast websites, AI chatbots and automation tools that help small businesses win more clients and save time.
+      </p>
+      <div class="cta">
+        <a href="#contact" class="btn primary" data-i18n="hero.cta1">Start a project</a>
+        <a href="#projects" class="btn ghost" data-i18n="hero.cta2">See my work</a>
+      </div>
+      <ul class="stack" aria-label="Tech stack">
+        <li>JavaScript</li><li>Python</li><li>Node.js</li><li>HTML/CSS</li><li>Gemini AI</li>
+      </ul>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <h2 data-i18n="services.title">Services</h2>
+      <p class="sub" data-i18n="services.sub">Practical solutions, clear pricing, fast delivery.</p>
+      <div class="grid three">
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg>
+          </div>
+          <h3 data-i18n="services.web.title">Websites</h3>
+          <p data-i18n="services.web.text">Modern, responsive business websites and landing pages: fast, SEO-friendly and easy to update.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg>
+          </div>
+          <h3 data-i18n="services.bot.title">AI chatbots</h3>
+          <p data-i18n="services.bot.text">Customer-support assistants powered by generative AI that answer your clients 24/7, in their language.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5 6.8 15M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="3.5"/></svg>
+          </div>
+          <h3 data-i18n="services.auto.title">Python automation</h3>
+          <p data-i18n="services.auto.text">Scripts that remove repetitive work: data processing, reports, web scraping and API integrations.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 data-i18n="projects.title">Projects</h2>
+      <p class="sub" data-i18n="projects.sub">A selection of recent work. More coming soon.</p>
+      <div class="grid three">
+        <article class="card project reveal">
+          <div class="thumb t1" aria-hidden="true"></div>
+          <h3 data-i18n="projects.p1.title">Restaurant website demo</h3>
+          <p data-i18n="projects.p1.text">A modern showcase website for a fictional restaurant: menu, opening hours, location and booking.</p>
+          <p class="tags">HTML · CSS · JavaScript</p>
+          <span class="soon" data-i18n="projects.soon">Coming soon</span>
+        </article>
+        <article class="card project reveal">
+          <div class="thumb t2" aria-hidden="true"></div>
+          <h3 data-i18n="projects.p2.title">AI business chatbot</h3>
+          <p data-i18n="projects.p2.text">A Gemini-powered assistant that answers customer questions for a small business, with a secure backend.</p>
+          <p class="tags">Node.js · Express · Gemini API</p>
+          <span class="soon" data-i18n="projects.soon">Coming soon</span>
+        </article>
+        <article class="card project reveal">
+          <div class="thumb t3" aria-hidden="true"></div>
+          <h3 data-i18n="projects.p3.title">This portfolio</h3>
+          <p data-i18n="projects.p3.text">A lightweight, bilingual one-page site built with plain HTML, CSS and JavaScript.</p>
+          <p class="tags">HTML · CSS · JavaScript</p>
+          <a class="link" href="https://github.com/elalamiz605-tech/elalamiz605-tech.github.io" target="_blank" rel="noopener" data-i18n="projects.code">View code →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 data-i18n="contact.title">Let's work together</h2>
+      <p class="sub" data-i18n="contact.sub">Tell me about your project. I usually reply within 24 hours.</p>
+      <div class="contact-wrap">
+        <!-- Simple form: opens the visitor's email app with the message pre-filled (no server, no data stored) -->
+        <form id="contact-form" class="card form" novalidate>
+          <label>
+            <span data-i18n="contact.name">Name</span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label>
+            <span data-i18n="contact.email">Email</span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label>
+            <span data-i18n="contact.message">Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn primary" data-i18n="contact.send">Send message</button>
+          <p class="form-note" id="form-note" role="status"></p>
+        </form>
+        <div class="contact-info">
+          <a class="card info" href="mailto:elalamiz605@gmail.com">
+            <span class="label">Email</span>
+            <span>elalamiz605@gmail.com</span>
+          </a>
+          <a class="card info" href="https://github.com/elalamiz605-tech" target="_blank" rel="noopener">
+            <span class="label">GitHub</span>
+            <span>@elalamiz605-tech</span>
+          </a>
+          <div class="card info">
+            <span class="label" data-i18n="contact.location">Location</span>
+            <span data-i18n="contact.city">Madrid, Spain · Remote worldwide</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Ziad El Alami · <span data-i18n="footer.made">Built with HTML, CSS & JavaScript</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
