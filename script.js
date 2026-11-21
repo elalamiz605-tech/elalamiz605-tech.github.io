@@ -35,6 +35,8 @@ const FR = {
   "projects.p2.text": "Un assistant basé sur Gemini qui répond aux questions des clients d'une petite entreprise, avec un backend sécurisé.",
   "projects.p3.title": "Ce portfolio",
   "projects.p3.text": "Un site d'une page, léger et bilingue, réalisé en HTML, CSS et JavaScript.",
+  "projects.p4.title": "Site d'agence animé (démo)",
+  "projects.p4.text": "Un site vitrine cinématique pour une agence fictive d'automatisation et d'IA : vidéo en arrière-plan, animations holographiques et effets au défilement.",
   "projects.soon": "Bientôt disponible",
   "projects.code": "Voir le code →",
   "contact.title": "Travaillons ensemble",
