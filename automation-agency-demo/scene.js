@@ -349,7 +349,7 @@ export function initScene({ canvas, gsap, ScrollTrigger, onReady }) {
       const a = Math.random() * Math.PI * 2, r = 7.5 + Math.random() * 4;
       cube.position.set(Math.cos(a) * r, 1 + Math.random() * 7, Math.sin(a) * r);
       tries++;
-    } while (tries < 40 && panels.some((p) => p.base.distanceTo(cube.position) < 3.4));
+    } while (tries < 60 && (panels.some((p) => p.base.distanceTo(cube.position) < 3.4) || cube.position.x - cube.position.z < -8));
     world.add(cube);
     floaters.push({ cube, base: cube.position.clone(), phase: Math.random() * 6, spin: 0.3 + Math.random() * 0.6 });
   }
@@ -364,10 +364,10 @@ export function initScene({ canvas, gsap, ScrollTrigger, onReady }) {
     const wide = viewW > 900;
     // Wide screens: fixed height framing, scene on the right.
     // Narrow screens: fit the scene to the width and place it under the text.
-    const frustum = wide ? 15.5 : 14.5 / aspect;
+    const frustum = wide ? 16.5 : 14.5 / aspect;
     camera.left = (-frustum * aspect) / 2; camera.right = (frustum * aspect) / 2;
     camera.top = frustum / 2; camera.bottom = -frustum / 2;
-    if (wide) camera.setViewOffset(viewW, viewH, -viewW * 0.2, viewH * 0.02, viewW, viewH);
+    if (wide) camera.setViewOffset(viewW, viewH, -viewW * 0.2, -viewH * 0.05, viewW, viewH);
     else {
       // Centre the scene on the empty hero-visual area under the text.
       const spot = document.getElementById('hero-visual');
