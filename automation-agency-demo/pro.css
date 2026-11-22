@@ -18,9 +18,11 @@ html.lenis, html.lenis body { height: auto; }
 .line { display: block; overflow: hidden; padding-bottom: .04em; }
 .line-inner { display: block; }
 
-/* Hero visual: WebGL globe over the SVG fallback */
-#globe { position: absolute; left: -12%; top: -12%; width: 124%; height: 124%; pointer-events: none; }
-.webgl #hud-fallback { visibility: hidden; }
+/* Hero: full-bleed real-time 3D scene, video + SVG as fallbacks */
+#scene3d { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 1.2s ease; }
+.webgl #scene3d { opacity: 1; }
+.webgl #hero-video, .webgl #hud-fallback { visibility: hidden; }
+@media (max-width: 900px) { .hero-shade { background: linear-gradient(180deg, rgba(2,6,23,.9) 0%, rgba(2,6,23,.78) 42%, rgba(2,6,23,.05) 58%, rgba(2,6,23,.05) 100%) !important; } }
 
 /* Custom cursor (mouse only) */
 #cursor-ring, #cursor-dot { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 95; border-radius: 50%; opacity: 0; }
@@ -39,8 +41,8 @@ html.lenis, html.lenis body { height: auto; }
 .aj-card:hover::before { opacity: 1; }
 
 @media (prefers-reduced-motion: reduce) {
-  .js #preloader, #cursor-ring, #cursor-dot, #globe { display: none !important; }
-  .webgl #hud-fallback { visibility: visible; }
+  .js #preloader, #cursor-ring, #cursor-dot, #scene3d { display: none !important; }
+  .webgl #hud-fallback, .webgl #hero-video { visibility: visible; }
 }
 
 /* GSAP drives transforms on buttons and cards */
