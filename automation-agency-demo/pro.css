@@ -1,0 +1,50 @@
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Preloader */
+#preloader { display: none; }
+.js #preloader {
+  position: fixed; inset: 0; z-index: 100; background: #01030A;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+}
+.pre-logo { font-family: Syncopate, sans-serif; font-weight: 700; font-size: 16px; letter-spacing: .4em; color: #FFFFFF; }
+#pre-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(56px, 9vw, 110px); line-height: 1; color: #38BDF8; font-variant-numeric: tabular-nums; text-shadow: 0 0 40px rgba(56,189,248,.5); }
+.pre-bar { width: 240px; height: 2px; background: rgba(56,189,248,.18); overflow: hidden; }
+.pre-bar span { display: block; height: 100%; background: linear-gradient(90deg, #38BDF8, #F5B83D); transform-origin: left; transform: scaleX(0); }
+.pre-label { font-family: 'Space Grotesk', sans-serif; font-size: 12px; letter-spacing: .3em; color: #6E8DB8; }
+
+/* Masked headline lines */
+.line { display: block; overflow: hidden; padding-bottom: .04em; }
+.line-inner { display: block; }
+
+/* Hero: full-bleed real-time 3D scene, video + SVG as fallbacks */
+#scene3d { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 1.2s ease; }
+.webgl #scene3d { opacity: 1; }
+.webgl #hero-video, .webgl #hud-fallback { visibility: hidden; }
+@media (max-width: 900px) { .hero-shade { background: linear-gradient(180deg, rgba(2,6,23,.9) 0%, rgba(2,6,23,.78) 42%, rgba(2,6,23,.05) 58%, rgba(2,6,23,.05) 100%) !important; } }
+
+/* Custom cursor (mouse only) */
+#cursor-ring, #cursor-dot { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 95; border-radius: 50%; opacity: 0; }
+#cursor-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; border: 1px solid rgba(125,211,252,.75); transition: width .3s, height .3s, margin .3s, background .3s, border-color .3s; }
+#cursor-ring.is-hover { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: rgba(56,189,248,.12); border-color: rgba(245,184,61,.8); }
+#cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: #7DD3FC; box-shadow: 0 0 12px #38BDF8; }
+@media (pointer: coarse) { #cursor-ring, #cursor-dot { display: none; } }
+
+/* 3D tilt cards with pointer glare */
+.aj-card { transform-style: preserve-3d; will-change: transform; }
+.js .aj-card:hover { transform: none; }
+.aj-card::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(56,189,248,.18), transparent 42%);
+}
+.aj-card:hover::before { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js #preloader, #cursor-ring, #cursor-dot, #scene3d { display: none !important; }
+  .webgl #hud-fallback, .webgl #hero-video { visibility: visible; }
+}
+
+/* GSAP drives transforms on buttons and cards */
+.js .aj-btn { transition: box-shadow .25s !important; }
+@media (max-width: 640px) { #hero-visual { min-height: 400px !important; } }
