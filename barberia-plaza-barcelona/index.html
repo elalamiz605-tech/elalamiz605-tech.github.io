@@ -3,10 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Plaza Barcelona · Peluquería en Salamanca</title>
-<meta name="description" content="Plaza Barcelona, peluquería y barbería en la Plaza de Barcelona 17, barrio Garrido, Salamanca. Cortes, degradados, barba y peinado.">
-<meta property="og:title" content="Plaza Barcelona · Peluquería en Salamanca">
+<title>Barbería Plaza Barcelona by Kamal · Salamanca</title>
+<meta name="description" content="Barbería Plaza Barcelona by Kamal, Plaza de Barcelona 17, barrio Garrido, Salamanca. Corte de pelo desde 5 €, corte + barba 10 €. Cita previa por WhatsApp: 604 895 322.">
+<meta property="og:title" content="Barbería Plaza Barcelona by Kamal · Salamanca">
 <meta property="og:image" content="https://elalamiz605-tech.github.io/barberia-plaza-barcelona/storefront.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarberShop","name":"Barbería Plaza Barcelona by Kamal","telephone":"+34604895322","priceRange":"5 € – 10 €",
+"image":"https://elalamiz605-tech.github.io/barberia-plaza-barcelona/storefront.webp","url":"https://elalamiz605-tech.github.io/barberia-plaza-barcelona/",
+"address":{"@type":"PostalAddress","streetAddress":"Plaza de Barcelona, 17","postalCode":"37004","addressLocality":"Salamanca","addressRegion":"Castilla y León","addressCountry":"ES"},
+"geo":{"@type":"GeoCoordinates","latitude":40.9734694,"longitude":-5.6493969}}
+</script>
 <meta name="theme-color" content="#0e0b09">
 <meta name="author" content="Diseño web: Ziad El Alami">
 <style>html,body{margin:0}</style>
@@ -250,6 +256,42 @@ h1 em {
 @media (max-width: 420px) { .nav .btn-sm { display: none; } }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 
+
+/* ---------- Prices (from the shop's own price list) ---------- */
+.ico { width: 17px; height: 17px; flex: none; }
+.btn .ico { margin-right: .55em; }
+.btn-sm { display: inline-flex; align-items: center; }
+a.v { color: inherit; text-decoration: none; } a.v:hover { color: var(--brass); }
+.prices { position: relative; padding-block: clamp(84px, 12vw, 150px); padding-left: max(var(--gutter-x), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter-x), env(safe-area-inset-right, 0px));
+  background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(214, 164, 74, .09), rgba(14, 11, 9, 0) 70%), var(--ink); }
+.prices::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; opacity: .8;
+  background: repeating-linear-gradient(-45deg, #9e2330 0 10px, #efe7da 10px 20px, #23406e 20px 30px, #efe7da 30px 40px); }
+.prices-inner { max-width: 44rem; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+.prices-head { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.prices-head .overline { margin: 0; }
+.prices h2 { margin: 0; font-family: var(--f-display); font-style: italic; font-weight: 400; font-size: clamp(2.6rem, 5.6vw, 4.6rem); line-height: 1; color: var(--ivory); }
+.price-card { box-sizing: border-box; width: 100%; border: 1px solid var(--brass-soft); outline: 1px solid rgba(214, 164, 74, .14); outline-offset: 7px; padding: clamp(22px, 4vw, 44px) clamp(18px, 4.5vw, 52px); background: rgba(255, 255, 255, .012); }
+.price-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.price-list li { display: flex; align-items: baseline; gap: 14px; padding-block: 15px; }
+.price-list li + li { border-top: 1px solid rgba(214, 164, 74, .08); }
+.pr-name { font-family: var(--f-body); font-weight: 600; font-size: .9rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ivory); min-width: 0; }
+.pr-note { display: inline-block; margin-left: .7em; font-weight: 400; font-size: .74rem; letter-spacing: .06em; text-transform: none; color: var(--ivory-dim); }
+.pr-dots { flex: 1 1 24px; min-width: 24px; border-bottom: 1px dotted rgba(214, 164, 74, .45); transform: translateY(-4px); }
+.pr-price { font-family: var(--f-display); font-weight: 500; font-size: 1.9rem; line-height: 1; color: var(--brass); font-variant-numeric: lining-nums; white-space: nowrap; }
+.prices-book { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 26px; }
+.pb-k { font-size: .7rem; letter-spacing: .4em; text-transform: uppercase; color: var(--brass); }
+.pb-tel { font-family: var(--f-display); font-size: 1.8rem; color: var(--ivory); text-decoration: none; letter-spacing: .02em; font-variant-numeric: lining-nums; }
+.pb-tel:hover { color: var(--brass); }
+.visit-phone { margin: 0; font-size: .92rem; color: var(--ivory-dim); }
+.visit-phone a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid var(--brass-soft); } .visit-phone a:hover { color: var(--brass); }
+.price-card.reveal { transition-delay: .1s; } .prices-book.reveal { transition-delay: .2s; }
+@media (max-width: 560px) {
+  .price-list li { flex-wrap: wrap; gap: 4px 10px; padding-block: 13px; }
+  .pr-name { flex: 1 1 0; font-size: .82rem; letter-spacing: .1em; }
+  .pr-note { display: block; margin: 4px 0 0; }
+  .pr-dots { display: none; }
+  .pr-price { font-size: 1.65rem; }
+}
 </style>
 
 <div class="hero-wrap">
@@ -264,8 +306,8 @@ h1 em {
 <div class="cursor" id="cursor" aria-hidden="true"></div><div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
 <div class="page" id="top">
   <header class="nav">
-    <a class="brand" href="#top" aria-label="Plaza Barcelona peluquería">
-      <span class="brand-r">Plaza Barcelona</span><span class="brand-s">peluquería</span>
+    <a class="brand" href="#top" aria-label="Barbería Plaza Barcelona by Kamal">
+      <span class="brand-r">Plaza Barcelona</span><span class="brand-s">by Kamal</span>
     </a>
     <div class="nav-right">
       <div class="lang" role="group" aria-label="Idioma / Language">
@@ -273,29 +315,53 @@ h1 em {
         <span aria-hidden="true"></span>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="btn btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9734694,-5.6493969" target="_blank" rel="noopener" data-i18n="directions">Cómo llegar</a>
+      <a class="btn btn-sm" href="https://wa.me/34604895322?text=Hola%2C%20quiero%20pedir%20cita%20previa." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 7.9c.3-.1.6 0 .7.3l.7 1.6c.1.3 0 .5-.2.7l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.5-.3.7-.2l1.6.7c.3.1.4.4.3.7-.3 1-1.2 1.5-2.2 1.3-2.8-.6-4.9-2.7-5.5-5.5-.2-1 .3-1.9 1-2.5Z" fill="currentColor"/></svg><span data-i18n="book">Cita previa</span></a>
     </div>
   </header>
 
   <main class="hero">
-    <p class="overline" data-i18n="overline">Peluquería · Barrio Garrido, Salamanca</p>
+    <p class="overline" data-i18n="overline">Barbería · Barrio Garrido, Salamanca</p>
     <h1 data-i18n-html="h1"><span class="line"><span>El arte</span></span><span class="line"><span><em>del corte.</em></span></span></h1>
-    <p class="lede" data-i18n="lede">Cortes, degradados, barba y peinado en la Plaza de Barcelona. Pásate cuando quieras: muy pronto también podrás reservar tu cita online.</p>
+    <p class="lede" data-i18n="lede">Corte de pelo y barba en la Plaza de Barcelona, desde 5 €. Pide tu cita previa por WhatsApp o pásate cuando quieras.</p>
     <div class="ctas">
-      <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9734694,-5.6493969" target="_blank" rel="noopener"><span data-i18n="directions">Cómo llegar</span><span class="arr" aria-hidden="true"></span></a>
-      <a class="link" href="#visit" data-i18n="findus">Dónde estamos</a>
+      <a class="btn" href="https://wa.me/34604895322?text=Hola%2C%20quiero%20pedir%20cita%20previa." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 7.9c.3-.1.6 0 .7.3l.7 1.6c.1.3 0 .5-.2.7l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.5-.3.7-.2l1.6.7c.3.1.4.4.3.7-.3 1-1.2 1.5-2.2 1.3-2.8-.6-4.9-2.7-5.5-5.5-.2-1 .3-1.9 1-2.5Z" fill="currentColor"/></svg><span data-i18n="book">Cita previa</span><span class="arr" aria-hidden="true"></span></a>
+      <a class="link" href="#precios" data-i18n="seeprices">Ver precios</a>
     </div>
   </main>
 
   <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
   <footer class="rail">
-    <div class="item"><span class="k" data-i18n="r.services">Servicios</span><span class="v" data-i18n="r.servicesv">Corte · Degradado · Barba</span></div>
-    <div class="item"><span class="k" data-i18n="r.booking">Reservas</span><span class="v" data-i18n="r.bookingv">Online muy pronto</span></div>
+    <div class="item"><span class="k" data-i18n="r.services">Precios</span><a class="v" href="#precios" data-i18n="r.servicesv">Corte desde 5 €</a></div>
+    <div class="item"><span class="k" data-i18n="r.booking">Cita previa</span><a class="v" href="https://wa.me/34604895322?text=Hola%2C%20quiero%20pedir%20cita%20previa." target="_blank" rel="noopener">604 895 322</a></div>
     <div class="item"><span class="k" data-i18n="r.area">Barrio</span><span class="v">Garrido, Salamanca</span></div>
     <div class="item"><span class="k" data-i18n="r.where">Dónde estamos</span><span class="v">Plaza de Barcelona, 17</span></div>
   </footer>
 </div>
 </div>
+
+<section class="prices" id="precios" aria-labelledby="prices-h">
+  <div class="prices-inner">
+    <div class="prices-head reveal">
+      <p class="overline" data-i18n="pricesover">Barbería Plaza Barcelona</p>
+      <h2 id="prices-h" data-i18n="pricesh">Lista de precios</h2>
+    </div>
+    <div class="price-card reveal">
+      <ul class="price-list">
+        <li><span class="pr-name"><span data-i18n="p1">Corte de pelo</span> <span class="pr-note" data-i18n="p1n">+12 / −60 años</span></span><span class="pr-dots" aria-hidden="true"></span><span class="pr-price">7&nbsp;€</span></li>
+        <li><span class="pr-name"><span data-i18n="p2">Corte de pelo</span> <span class="pr-note" data-i18n="p2n">Niños −12 años</span></span><span class="pr-dots" aria-hidden="true"></span><span class="pr-price">5&nbsp;€</span></li>
+        <li><span class="pr-name"><span data-i18n="p3">Corte de pelo</span> <span class="pr-note" data-i18n="p3n">Mayores +60 años</span></span><span class="pr-dots" aria-hidden="true"></span><span class="pr-price">5&nbsp;€</span></li>
+        <li><span class="pr-name"><span data-i18n="p4">Corte de barba</span></span><span class="pr-dots" aria-hidden="true"></span><span class="pr-price">5&nbsp;€</span></li>
+        <li><span class="pr-name"><span data-i18n="p5">Corte de pelo + barba</span></span><span class="pr-dots" aria-hidden="true"></span><span class="pr-price">10&nbsp;€</span></li>
+        <li><span class="pr-name"><span data-i18n="p6">Corte de pelo + barba</span> <span class="pr-note" data-i18n="p6n">Mayores +60</span></span><span class="pr-dots" aria-hidden="true"></span><span class="pr-price">8&nbsp;€</span></li>
+      </ul>
+    </div>
+    <div class="prices-book reveal">
+      <span class="pb-k" data-i18n="book">Cita previa</span>
+      <a class="pb-tel" href="tel:+34604895322">+34 604 895 322</a>
+      <a class="btn" href="https://wa.me/34604895322?text=Hola%2C%20quiero%20pedir%20cita%20previa." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 7.9c.3-.1.6 0 .7.3l.7 1.6c.1.3 0 .5-.2.7l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.5-.3.7-.2l1.6.7c.3.1.4.4.3.7-.3 1-1.2 1.5-2.2 1.3-2.8-.6-4.9-2.7-5.5-5.5-.2-1 .3-1.9 1-2.5Z" fill="currentColor"/></svg><span data-i18n="wa">Abrir WhatsApp</span><span class="arr" aria-hidden="true"></span></a>
+    </div>
+  </div>
+</section>
 
 <section class="visit" id="visit">
   <div class="visit-bg" id="visit-bg" aria-hidden="true"><img src="storefront.webp" alt="" width="1400" height="1528" loading="lazy"></div>
@@ -304,6 +370,7 @@ h1 em {
       <p class="overline" data-i18n="findus">Dónde estamos</p>
       <h2>Plaza de Barcelona, 17</h2>
       <p class="visit-sub">37004 Salamanca · <span data-i18n="area">Barrio Garrido</span></p>
+      <p class="visit-phone"><span data-i18n="book">Cita previa</span> · <a href="tel:+34604895322">+34 604 895 322</a> · <a href="https://wa.me/34604895322?text=Hola%2C%20quiero%20pedir%20cita%20previa." target="_blank" rel="noopener">WhatsApp</a></p>
       <p class="visit-text" data-i18n="visittext">Busca el rótulo dorado y el poste de barbero, junto a la plaza. Sin complicaciones: entra, siéntate y sal con el corte que buscabas.</p>
       <div class="ctas">
         <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.9734694,-5.6493969" target="_blank" rel="noopener"><span data-i18n="directions">Cómo llegar</span><span class="arr" aria-hidden="true"></span></a>
@@ -316,7 +383,7 @@ h1 em {
   </div>
 </section>
 <footer class="site-footer">
-  <span>© 2026 Plaza Barcelona · <span data-i18n="footer">Peluquería en Salamanca</span></span>
+  <span>© 2026 Barbería Plaza Barcelona by Kamal · <span data-i18n="footer">Barbería en Salamanca</span></span>
   <span><span data-i18n="madeby">Diseño web</span>: <a href="https://elalamiz605-tech.github.io/">Ziad El Alami</a></span>
 </footer>
 
@@ -326,23 +393,29 @@ h1 em {
   var T = {
     es: {
       directions: "Cómo llegar", findus: "Dónde estamos", maps: "Ver en Google Maps", area: "Barrio Garrido",
-      overline: "Peluquería · Barrio Garrido, Salamanca",
+      overline: "Barbería · Barrio Garrido, Salamanca",
+      book: "Cita previa", seeprices: "Ver precios", wa: "Abrir WhatsApp", pricesover: "Barbería Plaza Barcelona", pricesh: "Lista de precios",
+      p1: "Corte de pelo", p1n: "+12 / −60 años", p2: "Corte de pelo", p2n: "Niños −12 años", p3: "Corte de pelo", p3n: "Mayores +60 años",
+      p4: "Corte de barba", p5: "Corte de pelo + barba", p6: "Corte de pelo + barba", p6n: "Mayores +60",
       h1: '<span class="line"><span>El arte</span></span><span class="line"><span><em>del corte.</em></span></span>',
-      lede: "Cortes, degradados, barba y peinado en la Plaza de Barcelona. Pásate cuando quieras: muy pronto también podrás reservar tu cita online.",
+      lede: "Corte de pelo y barba en la Plaza de Barcelona, desde 5 €. Pide tu cita previa por WhatsApp o pásate cuando quieras.",
       visittext: "Busca el rótulo dorado y el poste de barbero, junto a la plaza. Sin complicaciones: entra, siéntate y sal con el corte que buscabas.",
-      "r.services": "Servicios", "r.servicesv": "Corte · Degradado · Barba", "r.booking": "Reservas", "r.bookingv": "Online muy pronto",
-      "r.area": "Barrio", "r.where": "Dónde estamos", footer: "Peluquería en Salamanca", madeby: "Diseño web",
-      marquee: ["Corte de pelo", "Degradado", "Arreglo de barba", "Afeitado clásico", "Corte + barba", "Corte infantil", "Lavado y peinado"]
+      "r.services": "Precios", "r.servicesv": "Corte desde 5 €", "r.booking": "Cita previa",
+      "r.area": "Barrio", "r.where": "Dónde estamos", footer: "Barbería en Salamanca", madeby: "Diseño web",
+      marquee: ["Corte de pelo · 7 €", "Corte de barba · 5 €", "Corte + barba · 10 €", "Niños · 5 €", "Mayores +60 · 5 €", "Cita previa por WhatsApp"]
     },
     en: {
       directions: "Get directions", findus: "Find us", maps: "Open in Google Maps", area: "Garrido district",
-      overline: "Hair salon & barber · Garrido, Salamanca",
+      overline: "Barbershop · Garrido, Salamanca",
+      book: "Book an appointment", seeprices: "See prices", wa: "Open WhatsApp", pricesover: "Barbería Plaza Barcelona", pricesh: "Prices",
+      p1: "Haircut", p1n: "Ages 12 to 60", p2: "Haircut", p2n: "Kids under 12", p3: "Haircut", p3n: "Seniors 60+",
+      p4: "Beard trim", p5: "Haircut + beard", p6: "Haircut + beard", p6n: "Seniors 60+",
       h1: '<span class="line"><span>The art of</span></span><span class="line"><span><em>the cut.</em></span></span>',
-      lede: "Cuts, fades, beard work and styling on Plaza de Barcelona. Drop in any time: online booking is coming soon.",
+      lede: "Haircuts and beard trims on Plaza de Barcelona, from €5. Book on WhatsApp or just drop in.",
       visittext: "Look for the gold sign and the barber pole, right by the square. No fuss: walk in, take a seat and leave with the cut you wanted.",
-      "r.services": "Services", "r.servicesv": "Cut · Fade · Beard", "r.booking": "Booking", "r.bookingv": "Online soon",
-      "r.area": "Area", "r.where": "Find us", footer: "Hair salon in Salamanca", madeby: "Web design",
-      marquee: ["Haircut", "Skin fade", "Beard trim", "Classic shave", "Cut + beard", "Kids' cut", "Wash & style"]
+      "r.services": "Prices", "r.servicesv": "Haircut from €5", "r.booking": "Appointments",
+      "r.area": "Area", "r.where": "Find us", footer: "Barbershop in Salamanca", madeby: "Web design",
+      marquee: ["Haircut · €7", "Beard trim · €5", "Haircut + beard · €10", "Kids · €5", "Seniors 60+ · €5", "Book on WhatsApp"]
     }
   };
   var lang = "es";
