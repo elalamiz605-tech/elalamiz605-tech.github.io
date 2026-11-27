@@ -1,6 +1,6 @@
 # Ziad El Alami · Portfolio
 
-Personal portfolio of **Ziad El Alami**, junior full-stack developer based in Madrid.
+Personal portfolio of **Ziad El Alami**, full-stack developer based in Salamanca, Spain.
 
 🌐 **Live site:** https://elalamiz605-tech.github.io
 
