@@ -13,7 +13,7 @@ const FR = {
   "nav.services": "Services",
   "nav.projects": "Projets",
   "nav.contact": "Contact",
-  "hero.eyebrow": "Développeur Full-Stack · Salamanque",
+  "hero.eyebrow": "Développeur Full-Stack · À distance, partout dans le monde",
   "hero.hello": "Bonjour, je suis",
   "hero.tagline": "Je crée des sites web rapides, des chatbots IA et des outils d'automatisation qui aident les petites entreprises à gagner des clients et du temps.",
   "hero.cta1": "Lancer un projet",
@@ -46,7 +46,7 @@ const FR = {
   "contact.message": "Message",
   "contact.send": "Envoyer le message",
   "contact.location": "Localisation",
-  "contact.city": "Salamanque, Espagne · À distance partout",
+  "contact.city": "Espagne · À distance partout",
   "footer.made": "Réalisé en HTML, CSS et JavaScript",
 };
 
